@@ -1,13 +1,48 @@
-<ActionBar class="action-bar">
+<!-- <ActionBar class="action-bar">
     <NavigationButton visibility="hidden"></NavigationButton>
     <GridLayout columns="50, *">
         <Label class="action-bar-title" text="Settings" colSpan="2"></Label>
 
         <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
     </GridLayout>
-</ActionBar>
+</ActionBar> -->
 
-<GridLayout class="page__content">
+<FlexboxLayout class="pageCradle">
+  <AbsoluteLayout>
+    <Label
+      class="styleEllipse"
+      top="50"
+      left="50"
+    ></Label>
+    <FlexboxLayout class="pageHeader">
+      <Label class="fas menuButton" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
+      <Label style="margin-top: 15;"></Label>
+      <Label text="Settings" class="headerText"></Label>
+    </FlexboxLayout>
+  </AbsoluteLayout>
+  <FlexboxLayout class="sectionHeaderBG">
+    <Label text="BASIC INFORMATION" class="sectionHeaderText"></Label>
+  </FlexboxLayout>
+  <FlexboxLayout class="pageBody">
+    <FlexboxLayout class="settingsItemRow">
+      <Label class="settingsItemLabelText" text="Version Number"></Label>
+      <Label class="settingsItemValueText" [text]="versionNumber"></Label>
+    </FlexboxLayout>
+    <Label class="horizontalDivider"></Label>
+    <FlexboxLayout class="settingsItemRow">
+      <Label class="settingsItemLabelText" text="Distance"></Label>
+      <Label class="settingsItemValueText" [text]="distanceUnits"></Label>
+    </FlexboxLayout>
+    <Label class="horizontalDivider"></Label>
+    <FlexboxLayout class="settingsItemRow">
+      <Label class="settingsItemLabelText" text="Time Zone"></Label>
+      <Label class="settingsItemValueText" [text]="timeZone"></Label>
+    </FlexboxLayout>
+    <Label class="horizontalDivider"></Label>
+  </FlexboxLayout>
+</FlexboxLayout>
+
+<!-- <GridLayout class="page__content">
   <Label class="page__content-icon fas" text="&#xf013;"></Label>
-  <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
-</GridLayout>
+  <Label class="page__content-placeholder" text="Page content goes here"></Label>
+</GridLayout> -->

@@ -1,0 +1,72 @@
+.pageCradle {
+  flex-direction: column;
+  height: 100%;
+}
+
+.styleEllipse {
+  background: #297cb0;
+  height: 50;
+  width: 50;
+  border-radius: 50%;
+}
+
+.pageHeader {
+  height: 100;
+  width: 100%;
+  flex-direction: column;
+  padding: 0 15;
+  padding-bottom: 15;
+  background-color: #02426a;
+}
+
+.test {
+  border: 4px solid green;
+  width: 100%;
+}
+
+.menuButton {
+  color: white;
+  height: 25;
+  width: 25;
+}
+
+.headerText {
+  color: white;
+  font-size: 35;
+  font-weight: bold;
+}
+
+.sectionHeaderBG {
+  background-color: #EFEFEF;
+  padding: 5 15;
+}
+
+.sectionHeaderText {
+  font-size: 12;
+  color: #888888;
+}
+
+.pageBody {
+  padding: 0 15;
+  flex-direction: column;
+}
+
+.settingsItemRow {
+  padding: 20 0;
+  justify-content: space-between;
+}
+
+.settingsItemLabelText {
+  font-size: 20;
+}
+
+.settingsItemValueText {
+  font-size: 20;
+  color: #626262;
+}
+
+.horizontalDivider {
+  height: 1;
+  width: 100%;
+  background: #EFEFEF;
+}

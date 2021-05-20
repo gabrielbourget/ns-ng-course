@@ -5,8 +5,13 @@ import { Application } from '@nativescript/core'
 @Component({
   selector: 'Settings',
   templateUrl: './settings.component.html',
+  styleUrls: ["./settings.component.css"]
 })
 export class SettingsComponent implements OnInit {
+  versionNumber = "1.2.1";
+  distanceUnits = "Miles";
+  timeZone = "Ottawa, ON (GMT-4)";
+
   constructor() {
     // Use the component constructor to inject providers.
   }
