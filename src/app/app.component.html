@@ -1,68 +1,85 @@
-<!--
-RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
-Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
-https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawer/getting-started
--->
 <RadSideDrawer [drawerTransition]="sideDrawerTransition">
-  <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
-    <StackLayout row="0" class="nt-drawer__header">
-      <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image>
-      <Label class="nt-drawer__header-brand" text="User Name"></Label>
-      <Label class="nt-drawer__header-footnote" text="username@mail.com"></Label>
-    </StackLayout>
+  <GridLayout tkDrawerContent rows="auto, *">
+    <FlexboxLayout row="0" class="drawerHeader" orientation="horizontal">
+      <!-- <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image> -->
+      <FlexboxLayout class="avatarCradle">
+        <Label text="UN" class="avatarInitials"></Label>
+      </FlexboxLayout>
+      <Label class="initialsText" text="User Name"></Label>
+    </FlexboxLayout>
 
-    <ScrollView row="1" class="nt-drawer__body">
+    <ScrollView row="1">
       <StackLayout>
         <GridLayout
           columns="auto, *"
-          class="nt-drawer__list-item"
-          [class.-selected]="isComponentSelected('/home')"
+          class="drawerListItem"
+          [class.drawerListItemSelected]="isComponentSelected('/home')"
           (tap)="onNavItemTap('/home')"
         >
-          <Label col="0" text="&#xf015;" class="nt-icon fas"></Label>
-          <Label col="1" text="Home" class="p-r-10"></Label>
+          <Label
+            col="0" text="&#xf015;"
+            class="iconUnselected fas"
+            [class.iconSelected]="isComponentSelected('/home')"
+          ></Label>
+          <Label
+            col="1" text="Home/List"
+            class="menuItemText"
+            [class.menuItemTextSelected]="isComponentSelected('/home')"
+          ></Label>
         </GridLayout>
 
         <GridLayout
           columns="auto, *"
-          class="nt-drawer__list-item"
-          [class.-selected]="isComponentSelected('/browse')"
+          class="drawerListItem"
+          [class.drawerListItemSelected]="isComponentSelected('/browse')"
           (tap)="onNavItemTap('/browse')"
         >
-          <Label col="0" text="&#xf1ea;" class="nt-icon far"></Label>
-          <Label col="1" text="Browse" class="p-r-10"></Label>
+          <Label
+            col="0" text="&#xf005;"
+            class="iconUnselected far"
+            [class.iconSelected]="isComponentSelected('/browse')"
+          ></Label>
+          <Label
+            col="1" text="Favourite"
+            class="menuItemText"
+            [class.menuItemTextSelected]="isComponentSelected('/browse')"
+          ></Label>
         </GridLayout>
 
         <GridLayout
           columns="auto, *"
-          class="nt-drawer__list-item"
-          [class.-selected]="isComponentSelected('/search')"
-          (tap)="onNavItemTap('/search')"
-        >
-          <Label col="0" text="&#xf002;" class="nt-icon fas"></Label>
-          <Label col="1" text="Search" class="p-r-10"></Label>
-        </GridLayout>
-
-        <GridLayout
-          columns="auto, *"
-          class="nt-drawer__list-item"
-          [class.-selected]="isComponentSelected('/featured')"
-          (tap)="onNavItemTap('/featured')"
-        >
-          <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
-          <Label col="1" text="Featured" class="p-r-10"></Label>
-        </GridLayout>
-
-        <StackLayout class="hr"></StackLayout>
-
-        <GridLayout
-          columns="auto, *"
-          class="nt-drawer__list-item"
-          [class.-selected]="isComponentSelected('/settings')"
+          class="drawerListItem"
+          [class.drawerListItemSelected]="isComponentSelected('/settings')"
           (tap)="onNavItemTap('/settings')"
         >
-          <Label col="0" text="&#xf013;" class="nt-icon fas"></Label>
-          <Label col="1" text="Settings" class="p-r-10"></Label>
+          <Label
+            col="0" text="&#xf013;"
+            class="iconUnselected fas"
+            [class.iconSelected]="isComponentSelected('/settings')"
+          ></Label>
+          <Label
+            col="1" text="Settings"
+            class="menuItemText"
+            [class.menuItemTextSelected]="isComponentSelected('/settings')"
+          ></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="drawerListItem"
+          [class.drawerListItemSelected]="isComponentSelected('/search')"
+          (tap)="onNavItemTap('/search')"
+        >
+          <Label
+            col="0" text="&#xf002;"
+            class="iconUnselected fas"
+            [class.iconSelected]="isComponentSelected('/search')"
+          ></Label>
+          <Label
+            col="1" text="Log out"
+            class="menuItemText"
+            [class.menuItemTextSelected]="isComponentSelected('/search')"
+          ></Label>
         </GridLayout>
       </StackLayout>
     </ScrollView>

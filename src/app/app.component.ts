@@ -5,6 +5,7 @@ import {
   DrawerTransitionBase,
   RadSideDrawer,
   SlideInOnTopTransition,
+  SlideAlongTransition
 } from 'nativescript-ui-sidedrawer'
 import { filter } from 'rxjs/operators'
 import { Application } from '@nativescript/core'
@@ -12,6 +13,7 @@ import { Application } from '@nativescript/core'
 @Component({
   selector: 'ns-app',
   templateUrl: 'app.component.html',
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent implements OnInit {
   private _activatedUrl: string
@@ -24,6 +26,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this._activatedUrl = '/home'
     this._sideDrawerTransition = new SlideInOnTopTransition()
+    // this._sideDrawerTransition = new SlideAlongTransition()
 
     this.router.events
       .pipe(filter((event: any) => event instanceof NavigationEnd))

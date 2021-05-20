@@ -1,0 +1,59 @@
+.drawerHeader {
+  height: 100;
+  align-items: center;
+  padding-left: 15;
+  background: #02426a;
+}
+
+.avatarCradle {
+  justify-content: center;
+  align-items: center;
+  height: 50;
+  width: 50;
+  border-radius: 50%;
+  background: #297cb0;
+  margin-right: 10;
+}
+
+.avatarInitials {
+  font-size: 20;
+  color: white;
+}
+
+.initialsText {
+  font-size: 25;
+  color: white;
+}
+
+.drawerListItem {
+  height: "auto";
+  padding: 15 35;
+  margin: 20 15 0 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.drawerListItemSelected {
+  background: #02426a;
+}
+
+.iconUnselected {
+  color: "#02426a";
+  height: 20;
+  width: 20;
+  margin-right: 20;
+  color: #02426a;
+}
+
+.iconSelected {
+  color: white;
+}
+
+.menuItemText {
+  font-size: 20;
+  color: black;
+}
+
+.menuItemTextSelected {
+  color: white;
+}
