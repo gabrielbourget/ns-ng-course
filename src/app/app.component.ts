@@ -9,6 +9,7 @@ import {
 } from 'nativescript-ui-sidedrawer'
 import { filter } from 'rxjs/operators'
 import { Application } from '@nativescript/core'
+import Theme from "@nativescript/theme";
 
 @Component({
   selector: 'ns-app',
@@ -30,7 +31,9 @@ export class AppComponent implements OnInit {
 
     this.router.events
       .pipe(filter((event: any) => event instanceof NavigationEnd))
-      .subscribe((event: NavigationEnd) => (this._activatedUrl = event.urlAfterRedirects))
+      .subscribe((event: NavigationEnd) => (this._activatedUrl = event.urlAfterRedirects));
+
+    Theme.setMode(Theme.Light);
   }
 
   get sideDrawerTransition(): DrawerTransitionBase {

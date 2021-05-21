@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer'
-import { Application } from '@nativescript/core'
+import { Application, Page } from '@nativescript/core'
 
 @Component({
   selector: 'Settings',
@@ -12,8 +12,8 @@ export class SettingsComponent implements OnInit {
   distanceUnits = "Miles";
   timeZone = "Ottawa, ON (GMT-4)";
 
-  constructor() {
-    // Use the component constructor to inject providers.
+  constructor(private page: Page) {
+    this.page.actionBarHidden = true;
   }
 
   ngOnInit(): void {
